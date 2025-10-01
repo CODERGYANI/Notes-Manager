@@ -1,0 +1,17 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "my first mern project for revision",
+  "main": "index.js",
+  "scripts": {
+    "test": "node practice.js"
+  },
+  "author": "nitesh kaushik",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "nodemon": "^3.1.10"
+  }
+}
