@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="head">
+        <div class="title">
+            <h1>YOUR TO-DO List</h1>            
+        </div>
+        <form action="/add" class="content" method="POST">
+  <input type="text" name="title" placeholder="Add a new title">
+  <textarea name="data" placeholder="Add a new description"></textarea>
+  <button type="submit">Add</button>
+</form>
+    </div>
+    <div class="notes">
+  <% if (notes && notes.length > 0) { %>
+    <% notes.forEach(file => { %>
+      <div class="boxes">
+        <h3><%= file.replace('.txt','') %></h3>
+        <a href="/note/<%= file %>">Read More</a>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <p>No notes yet.</p>
+  <% } %>
+</div>
+
+   
+    <script src="/javascripts/scripts.js"></script>
+</body>
+</html>
